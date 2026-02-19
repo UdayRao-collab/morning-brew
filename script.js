@@ -75,11 +75,14 @@
   function startVideo() {
     // Kick off all CSS transitions by adding the state class
     heroSection.classList.add('is-playing');
-    // Start playing immediately — video is transparent until CSS delay lifts
+    // Start playing — if not ready yet, wait for canplay then try once more
     heroVideo.play().catch(() => {
-      // Autoplay blocked (shouldn't happen on a user click, but handle gracefully)
-      heroSection.classList.remove('is-playing');
-      scrollToMenu();
+      heroVideo.addEventListener('canplay', () => {
+        heroVideo.play().catch(() => {
+          heroSection.classList.remove('is-playing');
+          scrollToMenu();
+        });
+      }, { once: true });
     });
   }
 
