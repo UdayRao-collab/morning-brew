@@ -489,6 +489,9 @@ em { font-style: italic; color: var(--caramel); }
   overflow: hidden;
   box-shadow: var(--shadow-hover);
   animation: film-flicker 9s ease-in-out infinite;
+  /* Force WebKit to respect overflow:hidden + border-radius during GPU compositing */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  transform: translateZ(0);
 }
 
 /* Individual slides — crossfade via opacity */
@@ -500,6 +503,7 @@ em { font-style: italic; color: var(--caramel); }
   opacity: 0;
   transition: opacity 1.4s ease;
   filter: sepia(0.55) contrast(1.1) brightness(0.82) saturate(0.72);
+  border-radius: var(--radius-lg);
 }
 .slide.active { opacity: 1; }
 
