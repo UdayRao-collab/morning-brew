@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morning Brew — Craft Coffee, Crafted Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bean">&#9749;</span>
+        <span>Morning Brew</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#visit" class="nav-link">Visit</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <video class="hero-video" id="heroVideo" src="menu-intro.mp4" playsinline preload="metadata"></video>
+    <div class="hero-overlay"></div>
+    <button class="hero-skip-btn" id="heroSkipBtn" aria-label="Skip video">
+      <span class="hero-skip-icon" aria-hidden="true">&times;</span>
+      <span>Skip</span>
+    </button>
+    <div class="hero-content" data-animate>
+      <p class="eyebrow">Artisan Coffee &middot; Portland, OR</p>
+      <h1 class="hero-title">Morning<br /><em>Brew</em></h1>
+      <p class="hero-tagline">Craft Coffee, Crafted Moments</p>
+      <p class="hero-sub">
+        Every cup is a ritual. We source single-origin beans, roast in-house,
+        and hand-craft each drink with patience and passion.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary" id="menuVideoBtn" data-video-trigger>Explore Our Menu</a>
+        <a href="#visit" class="btn btn-ghost">Find Us</a>
+      </div>
+    </div>
+    <a href="#menu" class="scroll-hint" aria-label="Scroll down">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <p class="eyebrow">Signature Drinks</p>
+        <h2>Crafted With Care</h2>
+        <p class="section-sub">
+          Each drink is made to order using locally roasted beans and the
+          finest ingredients—no shortcuts, ever.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+
+        <div class="menu-card" data-animate>
+          <div class="card-img-bg" style="background-image: url('images/golden-option.jpeg'); background-position: center 25%;"></div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>The Golden Hour</h3>
+              <span class="price">$6.50</span>
+            </div>
+            <p>
+              Signature espresso with honey-infused oat milk, a whisper of
+              cinnamon, and gold-dusted cocoa on top.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Espresso</span>
+              <span class="tag">Honey</span>
+              <span class="tag">Oat Milk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-animate>
+          <div class="card-img-bg" style="background-image: url('images/forestmist-option.jpeg'); background-position: center 35%;"></div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Forest Mist Latte</h3>
+              <span class="price">$7.00</span>
+            </div>
+            <p>
+              Ceremonial matcha and espresso harmonize with steamed almond
+              milk, vanilla bean, and a pinch of sea salt.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Matcha</span>
+              <span class="tag">Espresso</span>
+              <span class="tag">Almond</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-animate>
+          <div class="card-img-bg" style="background-image: url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&q=85&fit=crop'); background-position: center 30%;"></div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Dark Ember Mocha</h3>
+              <span class="price">$7.50</span>
+            </div>
+            <p>
+              Double-shot espresso meets 70% Belgian dark chocolate, crowned
+              with smoked sea salt foam and house-made cream.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Dark Roast</span>
+              <span class="tag">Chocolate</span>
+              <span class="tag">Sea Salt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-animate>
+          <div class="card-img-bg" style="background-image: url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=85&fit=crop'); background-position: center 30%;"></div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Rose &amp; Cardamom Cold Brew</h3>
+              <span class="price">$6.00</span>
+            </div>
+            <p>
+              18-hour cold brew of single-origin Ethiopian beans, infused
+              with rose water and cardamom, served over hand-chipped ice.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Cold Brew</span>
+              <span class="tag">Floral</span>
+              <span class="tag">Ethiopian</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-animate>
+          <div class="card-img-bg" style="background-image: url('images/cardamom.jpeg'); background-position: center 30%;"></div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Cardamom Coffee</h3>
+              <span class="price">$6.00</span>
+            </div>
+            <p>
+              Espresso steeped with whole cardamom pods, releasing warm, intoxicating
+              spice—a beloved Middle Eastern tradition comforting in every aromatic sip.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Espresso</span>
+              <span class="tag">Cardamom</span>
+              <span class="tag">Spiced</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-animate>
+          <div class="card-img-bg" style="background-image: url('images/viatnamese.jpeg'); background-position: center top;"></div>
+          <div class="card-content">
+            <div class="card-title-row">
+              <h3>Vietnamese Coconut Coffee</h3>
+              <span class="price">$7.50</span>
+            </div>
+            <p>
+              Bold Vietnamese-drip coffee swirled with sweetened condensed milk and
+              lush coconut milk, poured over ice—tropical, rich, and irresistibly creamy.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Cold Brew</span>
+              <span class="tag">Coconut</span>
+              <span class="tag">Condensed Milk</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-footer" data-animate>
+        <p>Pastries, seasonal specials &amp; more available in-store daily.</p>
+        <a href="#contact" class="btn btn-outline">Ask About Our Full Menu &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" data-animate>
+          <div class="about-slideshow">
+            <div class="slide active" style="background-image: url('images/elena-01.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-02.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-03.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-04.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-05.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-06.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-07.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-08.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-09.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-10.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-11.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-12.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-13.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-14.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-15.jpeg')"></div>
+            <div class="slide" style="background-image: url('images/elena-16.jpeg')"></div>
+            <div class="film-vignette"></div>
+            <div class="film-grain"></div>
+            <div class="film-scratches"></div>
+          </div>
+          <div class="about-badge">
+            <span class="badge-num">10+</span>
+            <span class="badge-label">Years of Craft</span>
+          </div>
+        </div>
+        <div class="about-text" data-animate>
+          <p class="eyebrow">Our Story</p>
+          <h2>Born From a Love<br /><em>of Coffee</em></h2>
+          <p>
+            Morning Brew began in 2015 as a dream in a tiny apartment kitchen.
+            Our founder, <strong>Elena Rosario</strong>, spent years traveling
+            through Colombia, Ethiopia, and Japan—falling deeper in love with
+            the art of coffee at every stop.
+          </p>
+          <p>
+            She returned with a mission: bring world-class, thoughtfully sourced
+            coffee to a neighborhood setting where everyone feels at home. No
+            pretension. Just craft, community, and really good coffee.
+          </p>
+          <p>
+            Today, we partner directly with six small-batch farms across three
+            continents, roast in-house every Monday, and train our baristas for
+            200+ hours before they pull their first shot for a guest.
+          </p>
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-num">6</span>
+              <span class="stat-label">Partner Farms</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Continents</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">200h</span>
+              <span class="stat-label">Barista Training</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VISIT ========== -->
+  <section class="section visit" id="visit">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <p class="eyebrow">Come See Us</p>
+        <h2>Location &amp; Hours</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-info" data-animate>
+          <div class="info-block">
+            <h4>&#128205; Address</h4>
+            <p>247 Maple Street<br />Portland, OR 97201</p>
+            <a href="https://maps.google.com" class="text-link" target="_blank" rel="noopener">Get Directions &rarr;</a>
+          </div>
+          <div class="info-block">
+            <h4>&#128336; Hours</h4>
+            <div class="hours">
+              <div class="hours-row">
+                <span>Mon &ndash; Fri</span><span>6:30 AM &ndash; 7:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span>Saturday</span><span>7:00 AM &ndash; 8:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span>Sunday</span><span>7:30 AM &ndash; 6:00 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-block">
+            <h4>&#128222; Phone &amp; Email</h4>
+            <p><a href="tel:+15031234567">(503) 123-4567</a></p>
+            <p><a href="mailto:hello@morningbrewpdx.com">hello@morningbrewpdx.com</a></p>
+          </div>
+          <div class="info-block">
+            <h4>&#10024; Amenities</h4>
+            <div class="amenities">
+              <span class="amenity">Free WiFi</span>
+              <span class="amenity">Outdoor Seating</span>
+              <span class="amenity">Dog Friendly</span>
+              <span class="amenity">Wheelchair Access</span>
+            </div>
+          </div>
+        </div>
+        <div class="visit-map" data-animate>
+          <div class="map-card">
+            <div class="map-pin">&#128205;</div>
+            <h3>Morning Brew</h3>
+            <p>247 Maple Street<br />Portland, OR 97201</p>
+            <a href="https://maps.google.com" class="btn btn-primary" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-intro" data-animate>
+          <p class="eyebrow">Get In Touch</p>
+          <h2>We&rsquo;d Love to<br /><em>Hear From You</em></h2>
+          <p>
+            A question about our beans, a catering inquiry, or just to say
+            hello—drop us a note. We respond to every message personally.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn">Instagram</a>
+            <a href="#" class="social-btn">Facebook</a>
+            <a href="#" class="social-btn">TikTok</a>
+          </div>
+          <blockquote class="pull-quote">
+            &ldquo;Coffee is a language in itself.&rdquo;
+            <cite>&mdash; Jackie Chan</cite>
+          </blockquote>
+        </div>
+        <form class="contact-form" id="contactForm" data-animate novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <select id="fsubject" name="subject">
+              <option value="">Select a topic&hellip;</option>
+              <option value="general">General Inquiry</option>
+              <option value="catering">Catering &amp; Events</option>
+              <option value="wholesale">Wholesale Beans</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell us what&rsquo;s on your mind&hellip;" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message &#8594;</button>
+          <p class="form-note">We typically respond within 24 hours.</p>
+          <div class="form-success" id="formSuccess">
+            &#10003; Your message was sent! We&rsquo;ll be in touch soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-bean">&#9749;</span>
+            <span>Morning Brew</span>
+          </div>
+          <p>Craft Coffee, Crafted Moments</p>
+          <p class="footer-addr">247 Maple Street, Portland OR</p>
+        </div>
+        <div class="footer-col">
+          <h5>Navigate</h5>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#visit">Visit</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Follow Us</h5>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Hours</h5>
+          <ul class="hours-list">
+            <li>Mon–Fri: 6:30 AM–7 PM</li>
+            <li>Saturday: 7 AM–8 PM</li>
+            <li>Sunday: 7:30 AM–6 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Morning Brew Coffee. All rights reserved.</p>
+        <p>Made with &#9749; in Portland, OR</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
